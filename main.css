@@ -1,0 +1,291 @@
+/* Base */
+
+html
+{
+    height: 100%;
+}
+
+body
+{
+    font-family: 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    height: 100%;
+    line-height: 1em;
+    margin: 0px;
+    padding: 0px;
+}
+
+::selection
+{
+    background: #ffde00;
+}
+
+a:link
+{
+    border-bottom: 1px solid #cde;
+    color: #1560bd;
+    padding-bottom: 0px;
+    text-decoration: none;
+}
+
+a:visited
+{
+    border-bottom: 1px solid #cde;
+    color: #1560bd;
+    padding-bottom: 0px;
+    text-decoration: none;
+}
+
+a:hover
+{
+    border-bottom: 1px solid #d53e07;
+    color: #d53e07;
+    padding-bottom: 0px;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5
+{
+    font-family: 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    line-height: 130%;
+    text-shadow: white 0px 1px 0px;
+    margin-top: 40px;
+}
+
+h1 { font-size: 1.45em; font-weight: bold; }
+h2 { font-size: 1.35em; }
+h3 { font-size: 1.25em; }
+h4 { font-size: 1.15em; }
+h5 { font-size: 1.05em; }
+
+blockquote
+{
+    border-left: 2px solid lightgray;
+    padding-left: 10px;
+}
+
+iframe, img, embed
+{
+    max-width: 100%;
+}
+
+/* Containers */
+
+.no-bottom-container
+{
+    min-height: 100%;
+}
+
+.top-container, .middle-container, .bottom-container
+{
+    background-color: white;
+    min-width: 960px;
+    width: 100%;
+}
+
+.top-container
+{
+    background-color: #1a65ba;
+    margin: 0 auto;
+}
+
+.middle-container
+{
+    background: inherit;
+    overflow: auto;
+
+    /* bottom.height + bottom.border + 40px */
+    padding-bottom: 90px;
+    padding-top: 40px;
+}
+
+.bottom-container
+{
+    height: 50px;
+
+    /* (-1) * bottom.height + bottom.border */
+    margin-top: -50px;
+
+    position: relative;
+}
+
+/* Top */
+
+.top-content
+{
+    color: white;
+}
+
+.top-content h1
+{
+    font-size: 4em;
+    margin-top: 30px;
+    margin-bottom: 0;
+    margin-left: -5px;
+}
+
+.top-content p
+{
+    font-weight: 100;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    margin-top: 5px;
+}
+
+/* Middle */
+
+.middle-content
+{
+
+}
+
+.middle-content .remark a
+{
+    font-size: 0.8em;
+    margin-left: 10px;
+}
+
+.middle-content h2 .remark a
+{
+    font-size: 0.6em;
+    margin-left: 10px;
+}
+
+.middle-content .remark a:link, .middle-content .remark a:visited
+{
+    border-color: lightgray;
+    color: gray;
+}
+
+.middle-content .remark a:hover
+{
+    border-color: #d53e07;
+    color: #d53e07;
+}
+
+.middle-content p
+{
+    line-height: 1.5em;
+}
+
+.middle-content .speaker-photo
+{
+    border-radius: 10px;
+    height: 60px;
+    width: 60px;
+}
+
+.middle-content .marked
+{
+    background-color: #FFFDBE;
+    padding: 2px 2px;
+}
+
+/* Bottom */
+
+.bottom-content
+{
+    font-size: 1em;
+    height: 40px;
+    line-height: 40px;
+}
+
+/* Grid */
+
+.clearfix
+{
+    zoom: 1;
+}
+
+.clearfix:before, .clearfix:after
+{
+    content: '';
+    display: table;
+}
+
+.clearfix:after
+{
+    clear: both;
+}
+
+.grid-container-12
+{
+    margin: 0 auto;
+    width: 940px;
+    zoom: 1;
+}
+
+.grid-container-12:before, .grid-container-12:after
+{
+    content: '';
+    display: table;
+}
+
+.grid-container-12:after
+{
+    clear: both;
+}
+
+.grid-container.visible
+{
+    background-color:rgba(255,0,0,0.1);
+}
+
+.grid-row
+{
+    /* margin: 20px 0 0; */
+    margin: 0 0 0;
+
+    zoom: 1;
+}
+
+.grid-row:before, .grid-row:after
+{
+    content: '';
+    display: table;
+}
+
+.grid-row:after
+{
+    clear: both;
+}
+
+.grid-row:first-child
+{
+    margin-top: 0;
+}
+
+.grid-row > [class^='grid-cell-']
+{
+    float: left;
+    margin: 0 0 0 20px;
+}
+
+.grid-row > [class^='grid-cell']:first-child
+{
+    margin-left: 0;
+}
+
+.grid-row.visible
+{
+    background-color:rgba(255,0,0,0.2);
+}
+
+.grid-row > [class^='grid-cell-'].visible
+{
+    background-color:rgba(255,0,0,0.4);
+}
+
+.grid-cell-1  { width: 60px;  }
+.grid-cell-2  { width: 140px; }
+.grid-cell-3  { width: 220px; }
+.grid-cell-4  { width: 300px; }
+.grid-cell-5  { width: 380px; }
+.grid-cell-6  { width: 460px; }
+.grid-cell-7  { width: 540px; }
+.grid-cell-8  { width: 620px; }
+.grid-cell-9  { width: 700px; }
+.grid-cell-10 { width: 780px; }
+.grid-cell-11 {	width: 860px; }
+.grid-cell-12 {	width: 940px; }
